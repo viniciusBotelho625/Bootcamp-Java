@@ -1,0 +1,207 @@
+body {
+    background: linear-gradient(0, #120c56, #000000);
+}
+
+
+.stars::after {
+    content: " ";
+    position: absolute;
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    box-shadow: 50px 30px white,
+        100px 80px white,
+        200px 120px white,
+        400px 80px white,
+        400px 200px white,
+        500px 12px white,
+        600px 50px white,
+        500px 120px white,
+        600px 150px white,
+        700px 100px white,
+        800px 100px white,
+        900px 20px white,
+        1000px 130px white,
+        1100px 50px white,
+        800px 100px white;
+}
+
+.stars2 {
+    position: relative;
+    width: 1px;
+    height: 1px;
+    border-radius: 50%;
+    box-shadow: 15px 15px white,
+        125px 35px white,
+        50px 80px white,
+        10px 120px white,
+        275px 90px white,
+        230px 10px white,
+        120px 130px white,
+        300px 130px white,
+        220px 115px white,
+        400px 80px white;
+    animation: anim-stars 20s linear infinite;
+}
+
+.stars2::after {
+    content: " ";
+    position: absolute;
+    top: 150px;
+    width: 1px;
+    height: 1px;
+    border-radius: 50%;
+    box-shadow: 15px 15px white,
+        125px 35px white,
+        50px 80px white,
+        10px 120px white,
+        275px 90px white,
+        230px 10px white,
+        120px 130px white,
+        300px 130px white,
+        220px 115px white,
+        100px 80px white,
+        200px 120px white,
+        400px 200px white,
+        500px 12px white,
+        600px 50px white,
+        500px 120px white,
+        600px 150px white,
+        700px 100px white,
+        800px 100px white,
+        900px 20px white,
+        1000px 130px white,
+        1100px 50px white,
+        400px 80px white,
+        800px 100px white;
+}
+
+
+
+@keyframes anim-stars {
+    from {
+        transform: translateY(0px);
+    }
+
+    to {
+        transform: translateY(-150px);
+    }
+}
+
+
+.container {
+    padding: 0px 80px;
+    display: flex;
+    position: relative;
+    height: 100vh;
+}
+
+.scene {
+    position: relative;
+    overflow: hidden;
+}
+
+.scene .rocket {
+    animation: animate 0.2s ease infinite;
+}
+
+@keyframes animate {
+
+    0%,
+    100% {
+        transform: translateY(-2px);
+    }
+
+    50% {
+        transform: translateY(2px);
+    }
+}
+
+
+.container .rocket img {
+    width: 450px;
+    margin-top: 50px;
+}
+
+.card-sign-in {
+    background-color: #fff;
+    border-radius: 20px;
+    margin-top: 10%;
+    width: 300px;
+    height: 380px;
+    font-family: 'Roboto', sans-serif;
+    position: absolute;
+    right: 80px;
+    box-shadow: 4px 4px 3px 2px rgba(0, 0, 0, 0.2);
+}
+
+.card-sign-in .card-main {
+    padding: 25px;
+}
+
+.card-sign-in .card-header {
+    color: #33065C;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.card-sign-in .card-header p {
+    margin: 10px 0 20px 0;
+    color: #b0aabe;
+}
+
+.card-sign-in .card-body input {
+    padding: 8px;
+    border-radius: 8px;
+    border: 1px solid #aea6c2;
+    margin-top: 10px;
+    width: 100%;
+    height: 40px;
+    justify-content: center;
+}
+
+
+.card-sign-in .card-body input::placeholder {
+    font-size: 11px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.card-sign-in .card-body button {
+    border: none;
+    background-color: #8171E8;
+    width: 140px;
+    height: 40px;
+    padding: 12px;
+    margin-top: 35px;
+    color: #fff;
+    font-size: 14px;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    border-radius: 6px;
+    font-family: 'Roboto', sans-serif;
+    cursor: pointer;
+}
+
+.card-sign-in .card-body button:hover {
+    opacity: 0.8;
+    transition: 0.1s;
+}
+
+.card-sign-in hr {
+    border: 0;
+    border-top: 1px solid #b0aabe;
+}
+
+.card-sign-in .card-footer {
+    color: #b0aabe;
+    font-size: 13px;
+    display: flex;
+    margin-top: 10px;
+    justify-content: center;
+}
+
+.card-sign-in .card-footer p,
+a {
+    margin: 10px 5px 0px 0px;
+}
