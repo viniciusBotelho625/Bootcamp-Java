@@ -1,6 +1,7 @@
 import React from 'react';
 import './style.css';
-import person from '../../assets/teste.png';
+import person from '../../assets/person2.jpg';
+import { Link } from 'react-router-dom';
 
 export default function Register() {
     return(
@@ -15,7 +16,13 @@ export default function Register() {
                         <div className='form'>
                             <div className='form-header'>
                                 <p className='title'>Get Started</p>
-                                <p>Already Have Account?</p>
+                                <div>
+                                    <p>Already Have Account?</p> 
+                                    <Link classname="link" to={"/"}>
+                                        Sign in
+                                    </Link>
+                                    
+                                </div>
                             </div>
                             <div className='form-body'>
                                 <label>User full name</label>
@@ -23,7 +30,7 @@ export default function Register() {
                                     type="text"
                                     placeholder="Full name"
                                 />
-                                <label></label>
+                                <label>Type your email</label>
                                 <input 
                                     type="email"
                                     placeholder="Hello@gmail.com"
@@ -41,10 +48,10 @@ export default function Register() {
                             </div>
                             <button type='submit'>Sign Up</button>
                         </div>
-
                     </div>
                 </div>
             </div>
+            <div className='footer'></div>
         </div>
     );
 }

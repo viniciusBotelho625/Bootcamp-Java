@@ -40,7 +40,6 @@ export default function Login() {
                             <span>
                                 <FontAwesomeIcon icon={faArrowRight} />
                             </span>
-                            
                         </button>
                         
                     </div>

@@ -18,7 +18,7 @@ header {
     animation: bounce .5s alternate infinite ease-in;
 }
 
-.card-logo, p {
+.card-logo,  .card-logo p {
     text-decoration: none;
     font-size: 30px;
     /* font-family: 'Indie Flower', cursive; */
