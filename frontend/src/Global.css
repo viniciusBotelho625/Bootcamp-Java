@@ -12,6 +12,7 @@ html {
 }
 body {
     min-height: 100%;
+    background: linear-gradient(0, #120c56, #000000) fixed;
 }
 
 .app {
@@ -20,4 +21,8 @@ body {
     justify-content: center;
     width: 100%;
     flex-direction: column;
+}
+
+p , h1, h2, h3, button, input {
+    font-family: 'Roboto', sans-serif;
 }

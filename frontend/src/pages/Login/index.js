@@ -5,6 +5,7 @@ import './style.css';
 import Rocket from '../../assets/rocket-1.png';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { Link } from 'react-router-dom';
 
 export default function Login() {
     return (
@@ -33,18 +34,24 @@ export default function Login() {
                             name="password"
                             placeholder="Password"
                         />
+                        
                         <button>
                             login...
                             <span>
                                 <FontAwesomeIcon icon={faArrowRight} />
                             </span>
+                            
                         </button>
+                        
                     </div>
                 </div>
                 <hr></hr>
                 <div className="card-footer">
                     <p>Don´t have an account?</p>
-                    <a href="#">Create Account</a>
+                    <Link to={'/register'}>
+                        Create Account
+                    </Link>
+                    
                 </div>
             </div>
         </div>
