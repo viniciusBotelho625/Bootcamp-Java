@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from "react";
 import { useParams, useNavigate, Link } from 'react-router-dom'
-import api from "../../services/api";
+import api from "../../services/filmService/api";
 import './style.css';
 import { toast } from 'react-toastify'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'

@@ -183,6 +183,10 @@
     transition: 0.1s;
 }
 
+.card-sign-in .card-body button span {
+    font-size: 15px;
+}
+
 .card-sign-in hr {
     border: 0;
     border-top: 1px solid #b0aabe;

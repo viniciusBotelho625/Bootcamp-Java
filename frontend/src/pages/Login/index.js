@@ -2,7 +2,7 @@ import React from "react";
 import './style.css';
 
 
-import Rocket from '../../assets/rocket-1.png';
+import Rocket from '../../assets/rocket.png';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Link } from 'react-router-dom';
@@ -10,8 +10,8 @@ import { Link } from 'react-router-dom';
 export default function Login() {
     return (
         <div className="container">
-            <div class="stars" ></div>
-            <div class="stars2" ></div> 
+            <div className="stars" ></div>
+            <div className="stars2" ></div> 
             
             <div className="scene">
                 <div className="rocket">

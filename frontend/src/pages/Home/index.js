@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import api from '../../services/api';
+import api from '../../services/filmService/api';
 import './style.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSearch } from '@fortawesome/free-solid-svg-icons'
