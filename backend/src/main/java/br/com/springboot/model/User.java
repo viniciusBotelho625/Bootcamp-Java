@@ -2,6 +2,7 @@ package br.com.springboot.model;
 
 import java.io.Serializable;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -9,8 +10,6 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.Size;
-
-import org.hibernate.validator.constraints.NotEmpty;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -31,19 +30,21 @@ public class User implements Serializable {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    @NotEmpty(message = "{user.name.empty}")
+    
     @Size(min = 4, max = 20, message = "{user.name.size}")
+    @Column(nullable = false, unique = true)
     private String name;
 
-    @NotEmpty
+   
     @Email
+    @Column(nullable = false, unique = true)
     private String email;
 
-    @NotEmpty(message = "{user.username.empty}")
+    @Column(nullable = false, unique = true)
     @Size(min = 4, max = 8, message = "{user.username.size}")
     private String username;
 
-    @NotEmpty(message = "{user.password.empty}")
-    @Size(min = 4, max = 8, message = "{user.password.size}")
+
+    @Size(min = 4, max = 80, message = "{user.password.size}")
     private String password;
 }

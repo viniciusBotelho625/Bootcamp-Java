@@ -76,7 +76,8 @@
     font-size: 11px;
 }
 
-.form button {
+        
+.form .button-form {
     border: none;
     background-color: #8171E8;
     width: 140px;
@@ -93,7 +94,7 @@
     cursor: pointer;
 }
 
-.form button:hover {
+.form .button-form:hover {
     opacity: 0.8;
     transition: 0.1s;
 }

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import './style.css';
 
 
@@ -7,7 +7,17 @@ import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Link } from 'react-router-dom';
 
+import userService from '../../services/userService/api'
+
 export default function Login() {
+
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('')
+
+    function handleLogin() {
+
+    }
+
     return (
         <div className="container">
             <div className="stars" ></div>
@@ -20,19 +30,25 @@ export default function Login() {
             </div>
 
             <div className="card-sign-in">
-                <div className="card-main">
+                <form onSubmit={handleLogin} className="card-main">
                     <div className="card-header">
                         <h1>Welcome Back...</h1>
                         <p>Please enter your email and password</p>
                     </div>
                     <div className="card-body">
-                        <input type={"email"}
+                        <input 
+                            type={"email"}
                             name="email"
+                            value={email}
                             placeholder="Email"
+                            onChange={e => setEmail(e.target.value)}
                         />
-                        <input type={"password"}
+                        <input 
+                            type={"password"}
                             name="password"
+                            value={password}
                             placeholder="Password"
+                            onChange={e => setPassword(e.target.value)}
                         />
                         
                         <button>
@@ -40,10 +56,9 @@ export default function Login() {
                             <span>
                                 <FontAwesomeIcon icon={faArrowRight} />
                             </span>
-                        </button>
-                        
+                        </button>               
                     </div>
-                </div>
+                </form>
                 <hr></hr>
                 <div className="card-footer">
                     <p>Don´t have an account?</p>

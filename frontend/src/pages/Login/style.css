@@ -47,7 +47,7 @@
     height: 1px;
     border-radius: 50%;
     box-shadow: 15px 15px white,
-        125px 35px white,
+        125px 35px red,
         50px 80px white,
         10px 120px white,
         275px 90px white,
@@ -60,12 +60,12 @@
         400px 200px white,
         500px 12px white,
         600px 50px white,
-        500px 120px white,
+        500px 120px red,
         600px 150px white,
         700px 100px white,
         800px 100px white,
         900px 20px white,
-        1000px 130px white,
+        1000px 130px red,
         1100px 50px white,
         400px 80px white,
         800px 100px white;
@@ -94,6 +94,7 @@
 .scene {
     position: relative;
     overflow: hidden;
+    margin-bottom: 20px;
 }
 
 .scene .rocket {
