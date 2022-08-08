@@ -3,7 +3,7 @@ import './style.css';
 import person from '../../assets/person.jpg';
 import { Link, useNavigate } from 'react-router-dom';
 
-import { ToastContainer, toast } from 'react-toastify'
+import { toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css';
 
 import userService from '../../services/userService/api';
@@ -107,7 +107,6 @@ export default function Register() {
                                 />
                             </div>
                             <button className="button-form" type='submit'>Sign Up</button>
-                            <ToastContainer />
                         </div>
                     </form>
                 </div>

@@ -2,10 +2,10 @@ import React, {useEffect, useState} from "react";
 import { useParams, useNavigate, Link } from 'react-router-dom'
 import api from "../../services/filmService/api";
 import './style.css';
-import { toast } from 'react-toastify'
+import {  toast } from 'react-toastify'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faClose } from '@fortawesome/free-solid-svg-icons'
-
+import Header from '../../components/Header';
 
 function Film() {
 
@@ -77,29 +77,32 @@ function Film() {
     } 
 
     return(
-        <div className="film-card">
-            <span className="close">
-                <Link to="/home" className="close">
-                    <FontAwesomeIcon icon={faClose}/>
-                </Link>
-            </span>
-            <h1>{film.title}</h1>
-            <div className="container-film">
-                <div className="card-film-img">
-                    <img src={baseImg + film.backdrop_path} alt={film.title } />
-                </div>
-                <div className="film-info-sinopse">
-                    <h3>Sinopse</h3>
-                    <p className="text-sinopse">{`${sinopse} ...`}</p>
-                    <div className="area-button">
-                        <button onClick={saveFavorite}>Salvar</button>
-                        <button>
-                            <a target="blank" rel="external" href={`https://youtube.com/results?search_query=${film.title} Trailer`}>Trailer</a>
-                        </button>
+        <>
+        <Header/>
+            <div className="film-card">
+                <span className="close">
+                    <Link to="/home" className="close">
+                        <FontAwesomeIcon icon={faClose}/>
+                    </Link>
+                </span>
+                <h1>{film.title}</h1>
+                <div className="container-film">
+                    <div className="card-film-img">
+                        <img src={baseImg + film.backdrop_path} alt={film.title } />
+                    </div>
+                    <div className="film-info-sinopse">
+                        <h3>Sinopse</h3>
+                        <p className="text-sinopse">{`${sinopse} ...`}</p>
+                        <div className="area-button">
+                            <button onClick={saveFavorite}>Salvar</button>
+                            <button>
+                                <a target="blank" rel="external" href={`https://youtube.com/results?search_query=${film.title} Trailer`}>Trailer</a>
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </>
     ); 
 }
 

@@ -9,14 +9,14 @@ export default function Header() {
     return(
         <header>
             <div>
-                <Link to="/" className="card-logo" >
+                <Link to="/home" className="card-logo" >
                     <img src={Logo} alt="logo"/>
                     <p>CineCorn</p>
                 </Link>
             </div>
             <div>
                 <span>
-                    <Link to="/favoritos" className="favorite">
+                    <Link to="/favorites" className="favorite">
                         <FontAwesomeIcon icon={faHeartCircleCheck}/>
                     </Link>
                 </span>

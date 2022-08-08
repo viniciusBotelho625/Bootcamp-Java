@@ -4,6 +4,7 @@ import './style.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTrashCan } from '@fortawesome/free-solid-svg-icons'
 import { toast } from 'react-toastify'
+import Header from '../../components/Header';
 
 export default function Favorite() {
 
@@ -39,28 +40,31 @@ export default function Favorite() {
 
 
     return(
-        <div className='container-favorite'>
-            <div className='header-favorite'>
-                <p>Favoritos</p>
-                <p>Total: {totalFilms}</p>
-            </div> 
-            {films.length === 0 && <span>Você não tem nenhum filme salvo</span>}
-            <ul>
-                {films.map((film) => {
-                    return(
-                        <li className='row-list' key={film.id}>
-                            <div>
-                                <img src={baseImg + film.poster_path} alt={film.title } />
-                            </div>
-                            <p>{film.title}</p>
-                            <span onClick={() => deleteFilm(film.id)}>
-                                <FontAwesomeIcon icon={faTrashCan}/>
-                            </span>
-                        </li>
-                    )
-                })}
-            </ul>
-        </div>
+        <>
+            <Header />
+            <div className='container-favorite'>
+                <div className='header-favorite'>
+                    <p>Favoritos</p>
+                    <p>Total: {totalFilms}</p>
+                </div> 
+                {films.length === 0 && <span>Você não tem nenhum filme salvo!</span>}
+                <ul>
+                    {films.map((film) => {
+                        return(
+                            <li className='row-list' key={film.id}>
+                                <div>
+                                    <img src={baseImg + film.poster_path} alt={film.title } />
+                                </div>
+                                <p>{film.title}</p>
+                                <span onClick={() => deleteFilm(film.id)}>
+                                    <FontAwesomeIcon icon={faTrashCan}/>
+                                </span>
+                            </li>
+                        )
+                    })}
+                </ul>
+            </div>
+        </>
     );
 }
 
