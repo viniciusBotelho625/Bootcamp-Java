@@ -47,7 +47,7 @@ export default function Favorite() {
                     <p>Favoritos</p>
                     <p>Total: {totalFilms}</p>
                 </div> 
-                {films.length === 0 && <span>Você não tem nenhum filme salvo!</span>}
+                {films.length === 0 && <span className='txt-empty'>Você não tem nenhum filme salvo!</span>}
                 <ul>
                     {films.map((film) => {
                         return(

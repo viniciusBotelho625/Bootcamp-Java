@@ -28,19 +28,19 @@ header {
     align-items: center;
 }
 
-span, .link {
+.icon-favorite, .link {
     cursor: pointer;
     color: #fff;
     text-decoration: none;
     font-size: 23px;
 }
 
-span .favorite {
+.icon-favorite .favorite {
   color: white;
 }
 
 
-span .favorite:hover {
+.icon-favorite .favorite:hover {
   opacity: 0.5;
   transition: 1s;
 }

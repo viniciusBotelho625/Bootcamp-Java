@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
 import './style.css';
-import person from '../../assets/person.jpg';
 import { Link, useNavigate } from 'react-router-dom';
+import { faArrowRightFromBracket } from '@fortawesome/free-solid-svg-icons'
+import { faUnlockKeyhole } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import logo from '../../assets/logo.png';
 
 import { toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css';
@@ -52,66 +55,84 @@ export default function Register() {
         <div>
             <div className='container-register'>
                 <div className='register-main'>
-                    <div className='register-images'>
-                        {/* <img src='' alt='logo'/> */}
-                        <img src={person} alt='Person' />
+                    <div className='register-side-bar'>
+                        <img src={logo} alt='Person' />
                     </div>
                     <form className='card-form' onSubmit={handleLogin}>
                         <div className='form'>
                             <div className='form-header'>
-                                <p className='title'>Get Started</p>
-                                <div>
-                                    <p>Already Have Account?</p>
-                                    <Link classname="link" to={"/"}>
-                                        Sign in
-                                    </Link>
-
-                                </div>
+                                <p className='title'>Not Long, Complete Your Registration!</p>
+                                <hr/>
                             </div>
                             <div className='form-body'>
-                                <label>User full name</label>
-                                <input
-                                    name="name"
-                                    type="text"
-                                    placeholder="Full name"
-                                    value={name}
-                                    required="true"
-                                    onChange={e => setName(e.target.value)}
-                                />
-                                <label>Type your email</label>
-                                <input
-                                    name="email"
-                                    type="email"
-                                    placeholder="Hello@gmail.com"
-                                    required="true"
-                                    value={email}
-                                    onChange={e => setEmail(e.target.value)}
-                                />
-                                <label>Username</label>
-                                <input
-                                    name="username"
-                                    type="text"
-                                    placeholder="Username"
-                                    required="true"
-                                    value={username}
-                                    onChange={e => setUsername(e.target.value)}
-                                />
-                                <label>Type your password</label>
-                                <input
-                                    name="password"
-                                    type="password"
-                                    placeholder="Password"
-                                    required="true"
-                                    value={password}
-                                    onChange={e => setPassword(e.target.value)}
-                                />
+                                <div className='form-row'>
+                                    <div className='input-label'>
+                                        <label>User full name</label>
+                                        <input
+                                            name="name"
+                                            type="text"
+                                            placeholder="Full name"
+                                            value={name}
+                                            required="true"
+                                            onChange={e => setName(e.target.value)}
+                                        />
+                                    </div>
+                                    <div className='input-label'>
+                                        <label>Type your email</label>
+                                        <input
+                                            name="email"
+                                            type="email"
+                                            placeholder="Hello@gmail.com"
+                                            required="true"
+                                            value={email}
+                                            onChange={e => setEmail(e.target.value)}
+                                        />
+                                    </div>
+                                </div>
+                                <div className='form-row'>
+                                    <div className='input-label'>
+                                        <label>Username</label>
+                                        <input
+                                            name="username"
+                                            type="text"
+                                            placeholder="Username"
+                                            required="true"
+                                            value={username}
+                                            onChange={e => setUsername(e.target.value)}
+                                        />
+                                    </div> 
+                                    <div className='input-label'>
+                                        <label>Type your password</label>
+                                        <input
+                                            name="password"
+                                            type="password"
+                                            placeholder="Password"
+                                            required="true"
+                                            value={password}
+                                            onChange={e => setPassword(e.target.value)}
+                                        />
+                                        <span className='icon'>
+                                            <FontAwesomeIcon icon={faUnlockKeyhole} />
+                                        </span>
+                                    </div>   
+                                </div>
                             </div>
-                            <button className="button-form" type='submit'>Sign Up</button>
+                            <div className='form-footer'>
+                                <div>
+                                    <Link to={"/"}>
+                                        <button type='button'>Back 
+                                            <span>
+                                                <FontAwesomeIcon icon={faArrowRightFromBracket} />
+                                            </span>
+                                        </button>
+                                    </Link>
+                                    <button type='submit'>Sign Up</button>
+                                </div>
+                            </div>
                         </div>
                     </form>
                 </div>
             </div>
-            <div className='footer'></div>
         </div>
     );
 }

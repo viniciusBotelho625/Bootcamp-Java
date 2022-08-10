@@ -10,6 +10,11 @@
     margin-top: 30px;
 }
 
+.container-favorite .txt-empty {
+    color: #fff;
+    font-size: 20px;
+}
+
 .header-favorite {
     color: #fff;
     display: flex;
@@ -38,8 +43,9 @@ ul {
     border-radius: 10px;
 }
 
-span:hover {
+.row-list span:hover {
     color: #e32636;
     opacity: 0.8;
     transition: all ease-in-out 0.5s;
+    cursor: pointer;
 }

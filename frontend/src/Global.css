@@ -23,6 +23,6 @@ body {
     flex-direction: column;
 }
 
-p , h1, h2, h3, button, input, label {
+p , h1, h2, h3, button, input, label, span {
     font-family: 'Roboto', sans-serif;
 }

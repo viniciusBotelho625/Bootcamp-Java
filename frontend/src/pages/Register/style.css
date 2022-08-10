@@ -3,98 +3,126 @@
     justify-content: center;
     height: 100vh;
     width: 100%;
-    background-color: #D3DFFB;
+    background-color: #f3f3f5;
 }
 
 .register-main {
-    display: flex;
-    border-radius: 20px;
-    background-color: #FFFFFF;
+    display: flex;  
     width: 100%;
-    margin: 60px 120px;
 }
 
-.register-images {
-    width: 50%;
-
+.register-side-bar {
+    width: 15%;
+    height: 100%;
+    background: linear-gradient(0, #120c56, #000000);
+    position: relative;
 }
 
-.register-images img {
-    width: 90%;
+.register-side-bar img {
+    width: 100px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
 }
 
 .card-form {
-    width: 50%;
-    background: linear-gradient(0, #120c56, #7e7e7e) fixed;
-}
-
-.form {
-    background-color: #F8FAFB;
-    border-radius: 10px;
-    width: 380px;
-    height: 480px;
-    flex-direction: column;
-    margin-top: 20px;
-    padding: 20px 50px;
-    margin: 20px auto;
-}
-
-.form label {
-    font-weight: bold;
-    font-size: 12px;
-}
-
-.form-header {
-    text-align: center;
-    margin-bottom: 15px;
-    line-height: 1.5;
+    width: 85%;
+    padding: 120px 200px;
 }
 
 .form-header .title {
     font-weight: bold;
-    font-size: 20px;
+    font-size: 24px;
+    color: #8171E8;
+    justify-content:left;
+    margin-bottom: 25px;
 }
 
-.form-header > div {
-    display: flex;
-    align-items: center;
-    font-size: 12px;
-    gap: 10px;
+.form-header hr {
+    margin-bottom: 30px;
+    width: 98%;
+    border: 1px solid rgb(211, 211, 211);
 }
+
+
+.form-body {
+    flex-direction: column;
+    width: 100%;
+}
+
+.form-body .form-row {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.form-body .form-row .input-label {
+    display: block;
+    width: 50%;
+}
+
+
 
 .form-body input {
-    width: 100%;
+    width: 95%;
+    margin-right: 50px;
     height: 30px;
-    margin: 8px 0px 20px 0px;
+    margin: 28px 0px;
     border: none;
-    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.123);
+    background-color: #f3f3f5;
     padding: 8px;
-    border-radius: 4px;
+    color: #5741ec;
+    font-size: 18px;
+    border-bottom: 2px solid rgb(211, 211, 211);
 }
 
 .form-body input::placeholder {
-    font-size: 11px;
+    font-size: 15px;
 }
 
+.form-body input:focus {
+    outline: 0;
+    border-bottom: 2px solid #8171E8;;
+}
+
+.form-footer {
+    display: flex;
+    margin-top: 70px;
+}
+
+.form-footer div {
+    display: block;
+    margin-left: auto
+}
         
-.form .button-form {
+.form-footer  button{
     border: none;
     background-color: #8171E8;
     width: 140px;
     height: 40px;
     padding: 12px;
-    display: flex;
-    margin: 0 auto;
-    margin-top: 15px;
     color: #fff;
     font-size: 14px;
     align-items: center;
     border-radius: 8px;
     font-family: 'Roboto', sans-serif;
     cursor: pointer;
+    text-align: center;
+    margin-right: 8px;
 }
 
-.form .button-form:hover {
+.form-footer button:hover {
     opacity: 0.8;
     transition: 0.1s;
+}
+
+.icon {
+    color: gray;
+    margin-left: -15px;
+    cursor: none;
+}
+
+.form-footer span {
+    color: #fff;
+    margin-left: 8px;
 }

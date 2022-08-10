@@ -15,7 +15,7 @@ export default function Header() {
                 </Link>
             </div>
             <div>
-                <span>
+                <span className="icon-favorite">
                     <Link to="/favorites" className="favorite">
                         <FontAwesomeIcon icon={faHeartCircleCheck}/>
                     </Link>
